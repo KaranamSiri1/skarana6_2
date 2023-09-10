@@ -1,0 +1,32 @@
+```{r}
+a=matrix(c(3,1000,45,32,2,1200,40,24), nrow = 2, ncol = 4, byrow = TRUE)
+
+colnames(a)<-(c('Material_req','Sales','Labor(minutes)','Profit'))
+rownames(a)<-(c('Collegiate','Mini'))
+a
+```
+Suppose,
+
+No.of backpacks in Collegiate $$=x_c$$
+No.of backpacks in Mini $$=x_m$$
+
+(a) Decision Variables: $$x_c\hspace{.3cm} and \hspace{.3cm}x_m$$
+(b) Objective Functions:$$Max\hspace{.1cm}Z\hspace{.2cm}=\hspace{.2cm}32x_c+24x_m$$
+(c) Constraints:
+1. Material Constraints:$$3x_c+2x_m \le 5000$$
+2. Labor Constraints: $$45x_c+40x_m \le 35*40*60$$
+3. Sales Constraints:$$x_c \le 1000$$
+                     $$x_m \le 1200$$
+4. Non-negativity Constraints:$$x_c \ge 0 \hspace{.2cm} and \hspace{.2cm}x_m \ge 0$$
+
+(d)Linear Programming Model:
+Maximize,
+$$Max\hspace{.1cm}Z\hspace{.2cm}=\hspace{.2cm}32x_c+24x_m$$
+subject to the restrictions,
+$$3x_c+2x_m \le 5000$$
+$$45x_c+40x_m \le 35*40*60$$
+$$x_c \le 1000\hspace{.2cm} and \hspace{.2cm}x_m \le 1200$$
+and
+$$B_c \ge 0 \hspace{.2cm} and \hspace{.2cm}B_m \ge 0$$
+
+

@@ -1,0 +1,43 @@
+```{r}
+A1<-matrix(c(20,900,420,15,1200,360,12,750,300), nrow = 3, ncol = 3, byrow = TRUE)
+
+colnames(A1)<-(c('Space_Req', 'Sales Forecast(PerDay)', 'Profit'))
+rownames(A1)<-(c('Large', 'Medium','Small'))
+A1
+```
+```{r}
+A2=matrix(c(750,900,450), nrow = 3, ncol = 1, byrow = TRUE)
+
+colnames(A2)=(c('Excess Capacity'))
+rownames(A2)=(c('Plant1', 'Plant2','Plant3'))
+(A2)
+```
+
+Suppose,
+Size of large product $$=L$$
+Size of medium product $$=M$$
+Size of small product $$=S$$
+Plant1 $$=P_1$$
+Plant2 $$=P_2$$
+Plant3 $$=P_3$$
+
+(a) Decision Variables:$$L,M,S,P_1,P_2\hspace{.1cm}and\hspace{.1cm}P_3$$
+(b) Linear Programming:
+Maximize,
+$$Max\hspace{.1cm}Z\hspace{.1cm}=\hspace{.1cm}420(P_1L+P_2L+P_3L)+360(P_1M+P_2M+P_3M)+300(P_1S+P_2S+P_3S)$$
+subject to the restrictions,
+1.Excess Capacity Storage:   $$P_1L+P_1M+P_1S\le750$$
+                              $$P_2L+P_2M+P_2S\le900$$
+                              $$P_3L+P_3M+P_3S\le450$$ 
+2.Storage capacity: $$20P_1L+15P_1M+12P_1S\le13000$$
+                    $$20P_2L+15P_2M+12P_2S\le12000$$
+                    $$20P_3L+15P_3M+12P_3S\le5000$$
+3. Sales forecast per day:
+        For Large             $$P_1L+P_2L+P_3L=900$$
+        For Medium            $$P_1M+P_2M+P_3M=1200$$
+        For Small             $$P_1S+P_2S+P_3S=750$$
+4. Same Percentage of their excess capacity is being used:
+$$(P_1L+P_1M+P_1S)/750=(P_2L+P_2M+P_2S)/900$$
+$$(P_1L+P_1M+P_1S)/750=(P_1L+P_1M+P_1S)/450$$
+5. Non-negativity:
+$$L\ge0, M\ge0, S\ge0, P_1\ge0, P_2\ge0\hspace{.2cm} and \hspace{.2cm}P_3\ge0$$
